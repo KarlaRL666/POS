@@ -1,6 +1,7 @@
 from tkinter import *
 from tkinter import ttk
 from login import Login
+from login import Registro
 from container import Container
 import sys
 import os 
@@ -16,8 +17,8 @@ class Manager(Tk):
         container.pack(side=TOP, fill=BOTH, expand=True)
         container.configure(bg='#C6D9E3')
         
-        self.frame={}
-        for i in (Container):
+        self.frames={}
+        for i in (Login, Registro, Container):
             frame = i(container, self)
             self.frames[i]=frame
             
@@ -28,7 +29,7 @@ class Manager(Tk):
         self.style.theme_use('clam')
         
     def show_frame(self, container):
-        frame = self.frame[container]
+        frame = self.frames[container]
         
         # se usa para llamar al frente
         frame.tkraise()

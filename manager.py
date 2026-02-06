@@ -17,11 +17,11 @@ class Manager(Tk):
         container.configure(bg='#C6D9E3')
         
         self.frame={}
-        for i in (Login, Registro, Container):
+        for i in (Container):
             frame = i(container, self)
             self.frames[i]=frame
             
-        self.show_frame(Login)
+        self.show_frame(Container)
         
         # declaracion del estilo a usar
         self.style = ttk.Style()

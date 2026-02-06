@@ -7,4 +7,7 @@ class Clientes(tk.Frame):
         self.widgets()
     
     def widgets(self):
+        label = Label(self, text='Clientes')
+        label.pack()
+      
         pass

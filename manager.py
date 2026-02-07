@@ -22,7 +22,7 @@ class Manager(Tk):
             frame = i(container, self)
             self.frames[i]=frame
             
-        self.show_frame(Container)
+        self.show_frame(Login)
         
         # declaracion del estilo a usar
         self.style = ttk.Style()
